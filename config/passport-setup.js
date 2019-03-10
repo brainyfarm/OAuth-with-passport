@@ -30,6 +30,7 @@ passport.use(
           const newUser = new User({
             username: profile.displayName,
             googleId: profile.id,
+            thumbnail: profile._json.picture,
           });
 
           return newUser.save()
